@@ -1,4 +1,5 @@
-import { Provider } from "@/shared/provider";
+import { Header } from "@/components/layout/Header";
+import { Provider } from "@/shared/theme/provider";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,7 +15,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning>
-        <Provider>{children}</Provider>
+        <Provider>
+          <Header />
+          {children}
+        </Provider>
       </body>
     </html>
   );

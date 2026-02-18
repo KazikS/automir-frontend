@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "typegen": "chakra typegen src/shared/theme/theme.ts"
+    "chakra": "npx @chakra-ui/cli typegen src/shared/theme/theme.ts"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.33.0",
