@@ -3,124 +3,70 @@ import { defineSemanticTokens } from "@chakra-ui/react";
 export const colors = defineSemanticTokens.colors({
   surface: {
     page: {
-      value: {
-        base: "{colors.surface.page}",
-        _dark: "{colors.surfaceDark.page}",
-      },
+      value: { base: "{colors.neutral.50}", _dark: "{colors.neutral.950}" },
     },
     card: {
-      value: {
-        base: "{colors.surface.card}",
-        _dark: "{colors.surfaceDark.card}",
-      },
+      value: { base: "#FFFFFF", _dark: "{colors.neutral.800}" },
     },
     elevated: {
-      value: {
-        base: "{colors.surface.elevated}",
-        _dark: "{colors.surfaceDark.elevated}",
-      },
+      value: { base: "{colors.neutral.100}", _dark: "{colors.neutral.900}" },
     },
     hero: {
-      value: {
-        base: "{colors.surface.hero}",
-        _dark: "{colors.surfaceDark.hero}",
-      },
+      value: { base: "{colors.neutral.200}", _dark: "{colors.neutral.900}" },
     },
     footer: {
-      value: {
-        base: "{colors.surface.footer}",
-        _dark: "{colors.surfaceDark.footer}",
-      },
+      value: { base: "{colors.neutral.950}", _dark: "{colors.neutral.950}" },
     },
     overlay: {
-      value: {
-        base: "{colors.surface.overlay}",
-        _dark: "{colors.surfaceDark.overlay}",
-      },
+      value: { base: "rgba(0,0,0,0.5)", _dark: "rgba(0,0,0,0.7)" },
     },
   },
+
   text: {
     primary: {
-      value: {
-        base: "{colors.text.primary}",
-        _dark: "{colors.textDark.primary}",
-      },
+      value: { base: "{colors.neutral.950}", _dark: "{colors.neutral.100}" },
     },
     secondary: {
-      value: {
-        base: "{colors.text.secondary}",
-        _dark: "{colors.textDark.secondary}",
-      },
+      value: { base: "{colors.neutral.500}", _dark: "{colors.neutral.500}" },
     },
     tertiary: {
-      value: {
-        base: "{colors.text.tertiary}",
-        _dark: "{colors.textDark.tertiary}",
-      },
+      value: { base: "{colors.neutral.400}", _dark: "{colors.neutral.600}" },
     },
     inverse: {
-      value: {
-        base: "{colors.text.inverse}",
-        _dark: "{colors.textDark.inverse}",
-      },
+      value: { base: "#FFFFFF", _dark: "{colors.neutral.950}" },
     },
     accent: {
-      value: {
-        base: "{colors.text.accent}",
-        _dark: "{colors.textDark.accent}",
-      },
+      value: { base: "{colors.brand.500}", _dark: "{colors.brand.400}" },
     },
   },
+
   border: {
     subtle: {
-      value: {
-        base: "{colors.border.subtle}",
-        _dark: "{colors.borderDark.subtle}",
-      },
+      value: { base: "{colors.neutral.100}", _dark: "{colors.neutral.800}" },
     },
     default: {
-      value: {
-        base: "{colors.border.default}",
-        _dark: "{colors.borderDark.default}",
-      },
+      value: { base: "{colors.neutral.500}", _dark: "{colors.neutral.800}" },
     },
     strong: {
-      value: {
-        base: "{colors.border.strong}",
-        _dark: "{colors.borderDark.strong}", 
-      },
+      value: { base: "{colors.neutral.300}", _dark: "{colors.neutral.700}" },
     },
     accent: {
-      value: {
-        base: "{colors.border.accent}",
-        _dark: "{colors.borderDark.accent}",
-      },
+      value: { base: "{colors.brand.500}", _dark: "{colors.brand.500}" },
     },
   },
+
   state: {
     hover: {
-      value: {
-        base: "{colors.state.hover}",
-        _dark: "{colors.stateDark.hover}",
-      },
+      value: { base: "rgba(0,0,0,0.04)", _dark: "rgba(255,255,255,0.04)" },
     },
     active: {
-      value: {
-        base: "{colors.state.active}",
-        _dark: "{colors.stateDark.active}",
-      },
+      value: { base: "rgba(0,0,0,0.08)", _dark: "rgba(255,255,255,0.08)" },
     },
     focus: {
-      value: {
-        base: "{colors.state.focus}",
-        _dark: "{colors.stateDark.focus}",
-      },
+      value: { base: "rgba(229,57,53,0.2)", _dark: "rgba(248,113,113,0.2)" },
     },
     disabled: {
-      value: {
-        base: "{colors.state.disabled}",
-        _dark: "{colors.stateDark.disabled}",
-      },
+      value: { base: "{colors.neutral.200}", _dark: "{colors.neutral.800}" },
     },
   },
 });
