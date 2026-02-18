@@ -18,6 +18,7 @@ export const Header = () => {
       alignItems="end"
       px="5"
       position="relative"
+      mb="6"
       _after={{
         content: '""',
         position: "absolute",
