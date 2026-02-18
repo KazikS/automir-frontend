@@ -55,7 +55,7 @@ export const Header = () => {
             {label}
           </Box>
         ))}
-        <ColorModeButton pb={2}/>
+        <ColorModeButton pb={2} />
       </Flex>
     </Flex>
   );

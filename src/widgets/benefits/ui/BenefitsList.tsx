@@ -1,5 +1,5 @@
 import { Flex } from "@chakra-ui/react";
-import { BenefitCard } from "./BenefitCard";
+import { BenefitCard } from "@/shared/ui/BenefitCard";
 
 export const BenefitsList = () => {
   const BENEFITS = [

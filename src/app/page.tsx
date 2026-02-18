@@ -1,13 +1,13 @@
-import { BenefitCard, BenefitsList } from "@/widgets/landing/benefits";
-import { Hero } from "@/widgets/landing/Hero";
-import { Card } from '@/shared/ui/Card'
+import { CarCard } from "@/entities/car/ui/CarCard";
+import { BenefitsList } from "@/widgets/benefits";
+import { Hero } from "@/widgets/hero";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <BenefitsList />
-      <Card />
+      <CarCard />
     </>
   );
 }

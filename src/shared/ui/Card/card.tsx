@@ -1,17 +1,25 @@
-import { LinkBox, LinkOverlay } from "@chakra-ui/react";
+import { LinkBox, LinkBoxProps, LinkOverlay } from "@chakra-ui/react";
+import { ReactNode } from "react";
 
-export const Card = () => {
+type CardType = {
+  children: ReactNode;
+} & LinkBoxProps;
+
+export const Card = ({ children, ...props }: CardType) => {
   return (
     <LinkBox
       border="1px solid"
       maxW="350px"
       rounded="20px"
-      borderColor="border.subtle"
+      borderColor="border.default"
       overflow="hidden"
       cursor="pointer"
       transition="all 0.2s"
+      {...props}
     >
-      <LinkOverlay display="flex" flexDirection="column"></LinkOverlay>
+      <LinkOverlay display="flex" flexDirection="column">
+        {children}
+      </LinkOverlay>
     </LinkBox>
   );
 };

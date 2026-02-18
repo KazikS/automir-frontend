@@ -1,4 +1,4 @@
-import { Header } from "@/widgets/header/ui/Header";
+import { Header } from "@/widgets/header";
 import { Provider } from "@/shared/theme/provider";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
