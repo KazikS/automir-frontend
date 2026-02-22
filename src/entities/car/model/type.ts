@@ -9,6 +9,7 @@ export type CarCardType = {
   power: number;
   category: "new" | "used" | "tradeIn";
   images: string[];
+  createdAt: string;
 };
 export type CarType = {
   fuelType: string;
@@ -18,4 +19,5 @@ export type CarType = {
   wheelPosition: string;
   generation: string;
   equipment: string;
+  id: number;
 } & CarCardType;
