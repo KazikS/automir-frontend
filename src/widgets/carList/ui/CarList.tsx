@@ -2,7 +2,12 @@ import { CarCardType } from "@/entities/car/model/type";
 import { CarCard } from "@/entities/car/ui/CarCard";
 import { Grid } from "@chakra-ui/react";
 
-export const CarList = ({ cars }: { cars: CarCardType[] }) => {
+export const CarList = ({ cars, isFullList }: { cars: CarCardType[], isFullList: boolean }) => {
+  const carsArray = isFullList ? cars : cars.filter((car) => {
+    const referenceDate = new Date('2024-01-31');
+    const carCreatedDate = new Date(car.createdAt);
+    return carCreatedDate > referenceDate;
+  })
   return (
     <Grid
       templateColumns={{
@@ -14,7 +19,7 @@ export const CarList = ({ cars }: { cars: CarCardType[] }) => {
       gap="10"
       justifyItems="center"
     >
-      {cars.map((car) => (
+      {carsArray.map((car) => (
         <CarCard
           key={car.images[0]}
           brand={car.brand}

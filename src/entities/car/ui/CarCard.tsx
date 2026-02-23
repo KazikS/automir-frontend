@@ -19,7 +19,7 @@ export const CarCard = ({
   createdAt,
 }: CarCardType) => {
   return (
-    <Card>
+    <Card h="96">
       <Badge
         position="absolute"
         w="24"
@@ -37,7 +37,7 @@ export const CarCard = ({
       >
         {badge[category].label}
       </Badge>
-      <Flex borderBottom="1px solid" borderColor="border.default">
+      <Flex borderBottom="1px solid" borderColor="border.default" h="64">
         <CardCarousel images={images} />
       </Flex>
       <Flex flexDirection="column" p="2.5">

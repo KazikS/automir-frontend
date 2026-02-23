@@ -1,26 +1,12 @@
 import { CarCardType } from "@/entities/car/model/type";
+import { TrailerCard } from "@/entities/trailer/ui/TrailerCard";
 import { BenefitsList } from "@/widgets/benefits";
 import { CarList } from "@/widgets/carList/ui/CarList";
 import { Hero } from "@/widgets/hero";
+import { Box, Flex, Text } from "@chakra-ui/react";
 
 export default function Home() {
   const CAR_MOCK: CarCardType[] = [
-    {
-      brand: "Toyota",
-      model: "Camry",
-      year: 2023,
-      engineVolume: 2.5,
-      mileage: 12000,
-      price: 2850000,
-      transmission: "Автомат",
-      power: 200,
-      category: "new",
-      images: [
-        "https://images.hgmsites.net/lrg/2023-toyota-camry-se-auto-natl-angular-front-exterior-view_100857360_l.jpg",
-        "https://autockidka.ru/storage/images/sjbVBodWj6FIGcORBE92p96Yvehg96.jpg",
-      ],
-      createdAt: "2024-01-15",
-    },
     {
       brand: "BMW",
       model: "5 Series",
@@ -32,7 +18,9 @@ export default function Home() {
       power: 184,
       category: "used",
       images: [
-        "https://avatars.mds.yandex.net/get-autoru-vos/5151058/57ab63b704d452f9ef94b58cf30ce80a/456x342",
+        "/images/bmw-1.jpeg",
+        "/images/bmw-2.jpeg",
+        "/images/bmw-3.jpeg",
       ],
       createdAt: "2024-02-10",
     },
@@ -46,9 +34,7 @@ export default function Home() {
       transmission: "Робот",
       power: 180,
       category: "tradeIn",
-      images: [
-        "https://kolesa-uploads.ru/-/1594e96c-d8ac-4101-b905-c288cb73b95d/toyota-camry-front1-mini.jpg",
-      ],
+      images: ["/images/kia-1.jpg", "/images/kia-2.webp", "/images/kia-3.jpg"],
       createdAt: "2024-03-05",
     },
     {
@@ -62,7 +48,9 @@ export default function Home() {
       power: 197,
       category: "new",
       images: [
-        "https://images.hgmsites.net/lrg/2023-toyota-camry-se-auto-natl-angular-front-exterior-view_100857360_l.jpg",
+        "/images/merc-1.jpeg",
+        "/images/merc-2.webp",
+        "/images/merc-3.jpg",
       ],
       createdAt: "2024-03-20",
     },
@@ -77,7 +65,9 @@ export default function Home() {
       power: 150,
       category: "used",
       images: [
-        "https://autockidka.ru/storage/images/sjbVBodWj6FIGcORBE92p96Yvehg96.jpg",
+        "/images/sonata-1.webp",
+        "/images/sonata-2.jpg",
+        "/images/sonata-3.jpg",
       ],
       createdAt: "2024-01-28",
     },
@@ -85,8 +75,40 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <BenefitsList />
-      <CarList cars={CAR_MOCK} />
+      <Flex flexDirection="column" px="5">
+        <BenefitsList />
+        <Box>
+          <Text
+            fontSize="xl"
+            position="relative"
+            w="fit-content"
+            _after={{
+              content: '""',
+              position: "absolute",
+              bottom: 0,
+              left: "5",
+              right: "-10",
+              height: "1px",
+              bg: "border.default",
+            }}
+          >
+            Актуальные предложения
+          </Text>
+          {/* <CarList cars={CAR_MOCK} isFullList={true} /> */}
+          <TrailerCard
+            product_category="used"
+            model="Аляска 7143"
+            capacity={750}
+            width={1.91}
+            length={3.69}
+            height={0.34}
+            price={89000}
+            createdAt={"2026-02-24"}
+            trailer_category={"бортовой"}
+            year={2024}
+          />
+        </Box>
+      </Flex>
     </>
   );
 }

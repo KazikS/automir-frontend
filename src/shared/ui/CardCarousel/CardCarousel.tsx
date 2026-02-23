@@ -2,17 +2,33 @@ import { Carousel, HStack, Box, Image } from "@chakra-ui/react";
 
 export const CardCarousel = ({ images }: { images: string[] }) => {
   return (
-    <Carousel.Root slideCount={images.length} maxW="full" allowMouseDrag zIndex={1}>
+    <Carousel.Root
+      slideCount={images.length}
+      maxW="full"
+      allowMouseDrag
+      zIndex={1}
+    >
       <Carousel.ItemGroup>
         {images.map((image, index) => (
-          <Carousel.Item key={image} index={index} snapAlign="center">
-            <Box h="full">
-              <Image alt="" fit="cover" src={image} />
+          <Carousel.Item key={image} index={index} snapAlign="center" overflowY="hidden">
+            <Box h="64" overflow="hidden">
+              <Image
+                alt=""
+                w="full"
+                h="64"
+                objectFit="cover"
+                src={image}
+              />
             </Box>
           </Carousel.Item>
         ))}
       </Carousel.ItemGroup>
-      <Carousel.Control justifyContent="center" gap="4" position="absolute" bottom="1">
+      <Carousel.Control
+        justifyContent="center"
+        gap="4"
+        position="absolute"
+        bottom="1"
+      >
         <HStack gap="1.5">
           {images.map((_, index) => (
             <Carousel.Indicator
