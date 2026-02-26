@@ -1,0 +1,7 @@
+<!-- trade-in.svg — две стрелки по кругу (обмен) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M42 18H22a10 10 0 0 0 0 20h2"/>
+  <path d="M22 46h20a10 10 0 0 0 0-20h-2"/>
+  <polyline points="38 14 42 18 38 22"/>
+  <polyline points="26 42 22 46 26 50"/>
+</svg>

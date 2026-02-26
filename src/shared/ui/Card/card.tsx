@@ -15,9 +15,10 @@ export const Card = ({ children, ...props }: CardType) => {
       overflow="hidden"
       cursor="pointer"
       transition="all 0.2s"
+      h="full"
       {...props}
     >
-      <LinkOverlay display="flex" flexDirection="column">
+      <LinkOverlay display="flex" flexDirection="column" h="full">
         {children}
       </LinkOverlay>
     </LinkBox>

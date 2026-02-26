@@ -1,6 +1,6 @@
 export type TrailerCardType = {
   product_category: "new" | "used" | "tradeIn";
-  trailer_category: string
+  trailer_category: string;
   model: string;
   capacity: number;
   width: number;
@@ -9,6 +9,7 @@ export type TrailerCardType = {
   price: number;
   createdAt: string;
   year: number;
+  images: string[];
 };
 
 export type TrailerType = {
