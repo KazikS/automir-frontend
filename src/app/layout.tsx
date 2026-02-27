@@ -2,6 +2,7 @@ import { Header } from "@/widgets/header";
 import { Provider } from "@/shared/theme/provider";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import { Footer } from "@/widgets/footer/ui/Footer";
 
 export const metadata: Metadata = {
   title: "Автомир",
@@ -26,6 +27,7 @@ export default function RootLayout({
         <Provider>
           <Header />
           {children}
+          <Footer />
         </Provider>
       </body>
     </html>

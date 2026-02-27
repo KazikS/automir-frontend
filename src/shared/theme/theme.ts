@@ -5,9 +5,10 @@ import { semanticTokens } from "./semantic-tokens";
 export const config = defineConfig({
   globalCss: {
     "html, body": {
-      bg: 'surface.page',
+      bg: "surface.page",
       color: "text.primary",
       fontFamily: "body",
+      overflowX: "hidden",
     },
   },
   theme: {

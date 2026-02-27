@@ -1,7 +1,8 @@
 "use client";
 
 import { ColorModeButton } from "@/shared/theme/color-mode";
-import { Flex, Text, Box, Link } from "@chakra-ui/react";
+import { MainLogo } from "@/shared/ui/MainLogo";
+import { Flex, Box } from "@chakra-ui/react";
 
 export const Header = () => {
   const NAV_ITEMS = [
@@ -23,20 +24,13 @@ export const Header = () => {
         content: '""',
         position: "absolute",
         bottom: 0,
-        left: "5", // отступ слева (равен padding)
-        right: "5", // отступ справа
+        left: "5",
+        right: "5",
         height: "1px",
         bg: "border.default",
       }}
     >
-      <Link flexDirection="column" textDecoration="none">
-        <Text fontSize="6xl" lineHeight="1">
-          Автомир
-        </Text>
-        <Text ml="40" fontSize="xl" color="text.secondary">
-          Котлас
-        </Text>
-      </Link>
+      <MainLogo color="black" />
 
       <Flex as="nav" display="flex" gap="5" alignItems="end">
         {NAV_ITEMS.map(({ label, active }) => (

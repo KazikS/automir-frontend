@@ -55,7 +55,7 @@ export default function Home() {
               bg: "border.default",
             }}
           >
-            Услуги автосервиса
+            Услуги автосалона
           </Text>
           <Flex w="full">
             <ServiceList services={MOCK_SERVICES} />

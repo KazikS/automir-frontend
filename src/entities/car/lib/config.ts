@@ -17,7 +17,7 @@ export const CAR_MOCK: CarCardType[] = [
     transmission: "Автомат",
     power: 184,
     category: "used",
-    images: ["/images/bmw-1.jpeg", "/images/bmw-2.jpeg", "/images/bmw-3.jpeg"],
+    images: ["/images/cars/bmw-1.jpeg", "/images/cars/bmw-2.jpeg", "/images/cars/bmw-3.jpeg"],
     createdAt: "2024-02-10",
   },
   {
@@ -30,7 +30,7 @@ export const CAR_MOCK: CarCardType[] = [
     transmission: "Робот",
     power: 180,
     category: "tradeIn",
-    images: ["/images/kia-1.jpg", "/images/kia-2.webp", "/images/kia-3.jpg"],
+    images: ["/images/cars/kia-1.jpg", "/images/cars/kia-2.webp", "/images/cars/kia-3.jpg"],
     createdAt: "2024-03-05",
   },
   {
@@ -44,9 +44,9 @@ export const CAR_MOCK: CarCardType[] = [
     power: 197,
     category: "new",
     images: [
-      "/images/merc-1.jpeg",
-      "/images/merc-2.webp",
-      "/images/merc-3.jpg",
+      "/images/cars/merc-1.jpeg",
+      "/images/cars/merc-2.webp",
+      "/images/cars/merc-3.jpg",
     ],
     createdAt: "2024-03-20",
   },
@@ -61,9 +61,9 @@ export const CAR_MOCK: CarCardType[] = [
     power: 150,
     category: "used",
     images: [
-      "/images/sonata-1.webp",
-      "/images/sonata-2.jpg",
-      "/images/sonata-3.jpg",
+      "/images/cars/sonata-1.webp",
+      "/images/cars/sonata-2.jpg",
+      "/images/cars/sonata-3.jpg",
     ],
     createdAt: "2024-01-28",
   },
