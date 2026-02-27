@@ -1,4 +1,4 @@
-import { Card } from "@/shared/ui/Card";
+import { Card } from "@/shared/ui/CustomCard";
 import { Badge, Flex, Text } from "@chakra-ui/react";
 import { CarCardType } from "../model/type";
 import { carBadge as badge } from "../lib/config";

@@ -1,4 +1,4 @@
-import { Card } from "@/shared/ui/Card";
+import { CustomCard } from "@/shared/ui/CustomCard";
 import { Badge, Flex, Text } from "@chakra-ui/react";
 import { CardCarousel } from "../../../shared/ui/CardCarousel/CardCarousel";
 import { dateFormatter, divideNumberByPieces } from "@/shared/utils";
@@ -19,7 +19,7 @@ export const TrailerCard = ({
   images,
 }: TrailerCardType) => {
   return (
-    <Card>
+    <CustomCard>
       <Badge
         position="absolute"
         w="24"
@@ -68,6 +68,6 @@ export const TrailerCard = ({
           {dateFormatter(createdAt)}
         </Text>
       </Flex>
-    </Card>
+    </CustomCard>
   );
 };

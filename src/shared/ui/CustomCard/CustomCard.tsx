@@ -5,7 +5,7 @@ type CardType = {
   children: ReactNode;
 } & LinkBoxProps;
 
-export const Card = ({ children, ...props }: CardType) => {
+export const CustomCard = ({ children, ...props }: CardType) => {
   return (
     <LinkBox
       border="1px solid"

@@ -1,5 +1,5 @@
 import { Text, Image, Box } from "@chakra-ui/react";
-import { Card } from "@/shared/ui/Card";
+import { Card } from "@/shared/ui/CustomCard";
 import { ServiceType } from "../model/type";
 
 export const ServiceCardShort = ({ image, name, description }: ServiceType) => {
