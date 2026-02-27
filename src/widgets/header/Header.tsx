@@ -5,16 +5,20 @@ import { ColorModeButton } from "@/shared/theme/color-mode";
 import { MainLogo } from "@/shared/ui/MainLogo";
 import { Flex, Box, Collapsible, IconButton } from "@chakra-ui/react";
 import { LuMenu, LuX } from "react-icons/lu";
+import { usePathname } from "next/navigation";
+import NextLink from "next/link";
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const NAV_ITEMS = [
-    { label: "Автомобили", href: "/", active: true },
-    { label: "Прицепы", href: "/" },
-    { label: "Сервис", href: "/" },
-    { label: "Контакты", href: "/" },
+    { label: "Автомобили", href: "/cars" },
+    { label: "Прицепы", href: "/trailers" },
+    { label: "Сервис", href: "/service" },
+    { label: "Контакты", href: "/contacts" },
   ];
+
+  const pathname = usePathname();
 
   return (
     <Box as="header" position="relative" mb="6">
@@ -35,27 +39,27 @@ export const Header = () => {
       >
         <MainLogo color="black" />
 
-        {/* Desktop nav */}
         <Flex
           as="nav"
           display={{ base: "none", md: "flex" }}
           gap="5"
           alignItems="end"
         >
-          {NAV_ITEMS.map(({ label, active }) => (
+          {NAV_ITEMS.map(({ label, href }) => (
             <Box
               key={label}
+              asChild
               pb="2"
               cursor="pointer"
               fontWeight="medium"
-              color={active ? "text.primary" : "text.secondary"}
+              color={href === pathname ? "text.primary" : "text.secondary"}
               borderBottom="3px solid"
-              borderColor={active ? "border.accent" : "transparent"}
+              borderColor={href === pathname ? "border.accent" : "transparent"}
               zIndex="1"
               transition="all 0.2s"
-              _hover={{ color: "text.primary" }}
+              _hover={{ color: "text.primary", textDecoration: "none" }}
             >
-              {label}
+              <NextLink href={href}>{label}</NextLink>
             </Box>
           ))}
           <ColorModeButton pb={2} />
@@ -84,16 +88,18 @@ export const Header = () => {
             borderBottom="1px solid"
             borderColor="border.default"
           >
-            {NAV_ITEMS.map(({ label, active }) => (
+            {NAV_ITEMS.map(({ label, href }) => (
               <Box
                 key={label}
+                asChild
                 py="2"
                 cursor="pointer"
                 fontWeight="medium"
-                color={active ? "text.primary" : "text.secondary"}
-                _hover={{ color: "text.primary" }}
+                color={href === pathname ? "text.primary" : "text.secondary"}
+                _hover={{ color: "text.primary", textDecoration: "none" }}
+                onClick={() => setMenuOpen(false)}
               >
-                {label}
+                <NextLink href={href}>{label}</NextLink>
               </Box>
             ))}
             <ColorModeButton alignSelf="start" mt="1" />

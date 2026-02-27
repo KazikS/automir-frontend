@@ -1,8 +1,8 @@
 import { CAR_MOCK } from "@/entities/car/lib/config";
 import { MOCK_SERVICES } from "@/entities/service/lib/config";
-import { BenefitsList } from "@/widgets/benefits";
-import { GridList } from "@/widgets/grid/ui/GridList";
-import { Hero } from "@/widgets/hero";
+import { BenefitsList } from "@/widgets";
+import { GridList } from "@/widgets/grid/GridList";
+import { Hero } from "@/widgets";
 import { ServiceList } from "@/widgets/serviceList/ServiceList";
 import { Box, Flex, Text } from "@chakra-ui/react";
 

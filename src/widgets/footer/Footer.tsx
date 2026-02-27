@@ -1,7 +1,6 @@
 import { MainLogo } from "@/shared/ui/MainLogo";
 import { Box, Flex, Grid, Text } from "@chakra-ui/react";
 import { JetBrains_Mono } from "next/font/google";
-import { FaDivide } from "react-icons/fa";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin", "cyrillic"],

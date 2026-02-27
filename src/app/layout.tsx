@@ -1,8 +1,8 @@
-import { Header } from "@/widgets/header";
+import { Header, Footer } from "@/widgets";
 import { Provider } from "@/shared/theme/provider";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-import { Footer } from "@/widgets/footer/ui/Footer";
+import { Flex } from "@chakra-ui/react";
 
 export const metadata: Metadata = {
   title: "Автомир",
@@ -26,7 +26,7 @@ export default function RootLayout({
       <body suppressHydrationWarning>
         <Provider>
           <Header />
-          {children}
+          <Flex flexDirection="column" flex="1">{children}</Flex>
           <Footer />
         </Provider>
       </body>

@@ -9,6 +9,11 @@ export const config = defineConfig({
       color: "text.primary",
       fontFamily: "body",
       overflowX: "hidden",
+      minHeight: "100dvh",
+    },
+    body: {
+      display: "flex",
+      flexDirection: "column",
     },
   },
   theme: {

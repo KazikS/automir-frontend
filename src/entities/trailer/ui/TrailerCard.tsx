@@ -16,6 +16,7 @@ export const TrailerCard = ({
   price,
   createdAt,
   year,
+  images,
 }: TrailerCardType) => {
   return (
     <Card>
@@ -38,12 +39,7 @@ export const TrailerCard = ({
       </Badge>
       <Flex borderBottom="1px solid" borderColor="border.default" h="64">
         <CardCarousel
-          images={[
-            "/images/trailer-1.jpg",
-            "/images/trailer-2.jpg",
-            "/images/trailer-3.jpg",
-            "/images/trailer-4.jpg",
-          ]}
+          images={images}
         />
       </Flex>
       <Flex flexDirection="column" p="2.5">
