@@ -22,6 +22,7 @@ export const ServiceList = ({ services }: { services: ServiceType[] }) => {
           name={service.name}
           description={service.description}
           key={service.id}
+          id={service.id}
         />
       ))}
     </Grid>
