@@ -1,4 +1,4 @@
-import { CustomCard } from "@/shared/ui/CustomCard";
+import { CustomCard } from "@/shared/ui/CustomCard/CustomCard";
 import { Badge, Flex, Text } from "@chakra-ui/react";
 import { CardCarousel } from "../../../shared/ui/CardCarousel/CardCarousel";
 import { dateFormatter, divideNumberByPieces } from "@/shared/utils";
