@@ -1,10 +1,10 @@
 import { Text, Image, Box } from "@chakra-ui/react";
-import { Card } from "@/shared/ui/CustomCard";
+import { CustomCard } from "@/shared/ui/CustomCard";
 import { ServiceType } from "../model/type";
 
 export const ServiceCardShort = ({ image, name, description }: ServiceType) => {
   return (
-    <Card p="5" w={{base: "full", md: undefined}}>
+    <CustomCard p="5" w={{ base: "full", md: undefined }}>
       <Box
         w="24"
         h="24"
@@ -21,6 +21,6 @@ export const ServiceCardShort = ({ image, name, description }: ServiceType) => {
       <Text lineClamp="3" color="text.secondary" fontWeight="medium" mt="auto">
         {description}
       </Text>
-    </Card>
+    </CustomCard>
   );
 };

@@ -1,4 +1,4 @@
-import { Card } from "@/shared/ui/CustomCard";
+import { CustomCard } from "@/shared/ui/CustomCard";
 import { Badge, Flex, Text } from "@chakra-ui/react";
 import { CarCardType } from "../model/type";
 import { carBadge as badge } from "../lib/config";
@@ -19,7 +19,7 @@ export const CarCard = ({
   createdAt,
 }: CarCardType) => {
   return (
-    <Card h="96">
+    <CustomCard h="96">
       <Badge
         position="absolute"
         w="24"
@@ -55,6 +55,6 @@ export const CarCard = ({
           {dateFormatter(createdAt)}
         </Text>
       </Flex>
-    </Card>
+    </CustomCard>
   );
 };
