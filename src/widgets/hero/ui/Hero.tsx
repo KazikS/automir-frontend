@@ -10,7 +10,7 @@ export const Hero = () => {
       py="16"
     >
       <Text
-        fontSize="5xl"
+        fontSize={{base: "2xl", md: '5xl'}}
         lineHeight="1.25"
         textAlign="center"
         textDecoration="uppercase"
@@ -23,7 +23,7 @@ export const Hero = () => {
         наша ответственность
       </Text>
       <Text
-        fontSize="xl"
+        fontSize={{base: 'sm', md: "xl"}}
         textAlign="center"
         lineHeight="1.1"
         color="text.secondary"

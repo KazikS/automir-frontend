@@ -13,17 +13,23 @@ export const Footer = () => {
   const social_networks = ["VK", "TG", "WA"];
   return (
     <Flex flexDirection="column" bgColor="neutral.950">
-      <Flex
-        flexDirection={{ base: "column", md: "row" }}
-        gap={{ base: "10", md: 0 }}
-        w="full"
-        px="16"
-        py="5"
-        justifyContent="space-between"
+      <Grid
+        templateColumns={{
+          base: "1fr",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(3, 1fr)",
+        }}
+        justifyItems="center"
+        p="5"
       >
         <Flex flexDirection="column" justifyContent="space-between">
           <MainLogo color="white" />
-          <Text color="text.secondary" textAlign="justify" w="300px" mt="4">
+          <Text
+            color="text.secondary"
+            textAlign="justify"
+            w={{ base: "200px", md: "300px" }}
+            mt="4"
+          >
             Продажа автомобилей, прицепов и услуги автосалона в Котласе с 2010
             года
           </Text>
@@ -61,7 +67,7 @@ export const Footer = () => {
           <Text>Пн-Пт: 9.00 - 18.00</Text>
           <Text>Сб-Вс: 9.00 - 17.00</Text>
         </Flex>
-      </Flex>
+      </Grid>
       <Box
         w="calc(100% - 100px)"
         h="1px"
@@ -70,7 +76,15 @@ export const Footer = () => {
         border="1px solid"
         borderColor="neutral.700"
       />
-      <Text w="full" textAlign="center" color="text.secondary" mb="10" fontSize="sm">© 2026 Автомир Котлас. Все права защищены.</Text>
+      <Text
+        w="full"
+        textAlign="center"
+        color="text.secondary"
+        mb="10"
+        fontSize="sm"
+      >
+        © 2026 Автомир Котлас. Все права защищены.
+      </Text>
     </Flex>
   );
 };

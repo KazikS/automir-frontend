@@ -9,16 +9,16 @@ export const MainLogo = ({ color }: MainLogoProps) => {
       textDecoration="none"
       position="relative"
       pb="5"
-      w="64"
-      h="20"
+      w={{ base: "32", md: "64" }}
+      h={{ base: "14", md: "20" }}
     >
-      <Text fontSize="6xl" color={color} lineHeight="1">
+      <Text fontSize={{ base: "3xl", md: "6xl" }} color={color} lineHeight="1">
         Автомир
       </Text>
       <Text
         position="absolute"
         bottom="0"
-        right="7"
+        right={{ base: "4", md: "7" }}
         fontSize="xl"
         color="text.secondary"
       >

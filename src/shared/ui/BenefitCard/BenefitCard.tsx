@@ -22,9 +22,9 @@ export const BenefitCard = ({
       w="190px"
       h="120px"
     >
-      <Text fontWeight="bold">{firstLine}</Text>
-      <Text>{secondLine}</Text>
-      <Text>{thirdLine}</Text>
+      <Text fontWeight="bold" textAlign="center">{firstLine}</Text>
+      <Text textAlign="center">{secondLine}</Text>
+      <Text textAlign="center">{thirdLine}</Text>
     </Flex>
   );
 };

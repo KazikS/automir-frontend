@@ -8,7 +8,14 @@ export const BenefitsList = () => {
     { firstLine: "98%", secondLine: "положительных", thirdLine: "отзывов" },
   ];
   return (
-    <Flex w="full" alignItems="center" justifyContent="center" gap="9" py="6">
+    <Flex
+      w="full"
+      alignItems="center"
+      justifyContent="center"
+      gap="9"
+      py="6"
+      flexDirection={{base: 'column', md: 'row'}}
+    >
       {BENEFITS.map(({ firstLine, secondLine, thirdLine }) => (
         <BenefitCard
           key={firstLine}
