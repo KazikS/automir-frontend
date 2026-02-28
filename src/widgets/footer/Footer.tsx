@@ -1,3 +1,4 @@
+import { Divider } from "@/shared/ui/Divider";
 import { MainLogo } from "@/shared/ui/MainLogo";
 import { Box, Flex, Grid, Text } from "@chakra-ui/react";
 import { JetBrains_Mono } from "next/font/google";
@@ -67,12 +68,11 @@ export const Footer = () => {
           <Text>Сб-Вс: 9.00 - 17.00</Text>
         </Flex>
       </Grid>
-      <Box
+      <Divider
         w="calc(100% - 100px)"
         h="1px"
         my="10"
         mx="auto"
-        border="1px solid"
         borderColor="neutral.700"
       />
       <Text

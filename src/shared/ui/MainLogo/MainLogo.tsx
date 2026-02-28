@@ -11,6 +11,7 @@ export const MainLogo = ({ color }: MainLogoProps) => {
       pb="5"
       w={{ base: "32", md: "64" }}
       h={{ base: "14", md: "20" }}
+      href="/"
     >
       <Text fontSize={{ base: "3xl", md: "6xl" }} color={color} lineHeight="1">
         Автомир
