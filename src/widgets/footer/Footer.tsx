@@ -12,7 +12,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const Footer = () => {
   const social_networks = ["VK", "TG", "WA"];
   return (
-    <Flex flexDirection="column" bgColor="neutral.950">
+    <Flex flexDirection="column" bgColor="neutral.950" borderTop="1px solid" borderColor="border.default">
       <Grid
         templateColumns={{
           base: "1fr",

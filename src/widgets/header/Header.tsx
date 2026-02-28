@@ -37,7 +37,7 @@ export const Header = () => {
           bg: "border.default",
         }}
       >
-        <MainLogo color="black" />
+        <MainLogo color="text.primary" />
 
         <Flex
           as="nav"

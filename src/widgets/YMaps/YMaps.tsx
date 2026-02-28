@@ -3,6 +3,7 @@
 import Script from "next/script";
 import { useRef, useCallback, useState } from "react";
 import { Box, BoxProps, Flex, Spinner } from "@chakra-ui/react";
+import { useColorMode } from "@/shared/theme/color-mode";
 
 declare global {
   interface Window {
@@ -23,6 +24,7 @@ export const YandexMap = ({
 }: YandexMapProps) => {
   const mapRef = useRef<HTMLDivElement>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const { colorMode } = useColorMode();
 
   const onLoad = useCallback(() => {
     window.ymaps.ready(() => {
@@ -68,7 +70,15 @@ export const YandexMap = ({
             <Spinner size="lg" />
           </Flex>
         )}
-        <Box ref={mapRef} w="full" h="full" />
+        <Box
+          ref={mapRef}
+          w="full"
+          h="full"
+          css={{
+            filter: colorMode === "dark" ? "invert(0.9) hue-rotate(180deg)" : "none",
+            transition: "filter 0.3s",
+          }}
+        />
       </Box>
     </>
   );
