@@ -16,10 +16,11 @@ export const CarCard = ({
   mileage,
   price,
   images,
+  id,
   createdAt,
 }: CarCardType) => {
   return (
-    <CustomCard h="96">
+    <CustomCard h="96" href={`/cars/namely/${id}`}>
       <Badge
         position="absolute"
         w="24"

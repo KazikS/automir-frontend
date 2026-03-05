@@ -12,6 +12,8 @@ export const MainLogo = ({ color }: MainLogoProps) => {
       w={{ base: "32", md: "64" }}
       h={{ base: "14", md: "20" }}
       href="/"
+      _focus={{ outline: "none", boxShadow: "none" }}
+      _focusVisible={{ outline: "none", boxShadow: "none" }}
     >
       <Text fontSize={{ base: "3xl", md: "6xl" }} color={color} lineHeight="1">
         Автомир

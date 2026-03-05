@@ -1,6 +1,14 @@
 import { MOCK_SERVICES } from "@/entities/service/lib/config";
 import { ServiceCardFull } from "@/entities/service/ui/ServiceCardFull";
-import { Grid, Text, VStack } from "@chakra-ui/react";
+import {
+  Button,
+  Field,
+  Fieldset,
+  Grid,
+  Input,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 
 export default function Services() {
   return (
@@ -8,7 +16,7 @@ export default function Services() {
       <Text
         fontSize="xl"
         position="relative"
-        w="fit-content"
+        w="48-content"
         _after={{
           content: '""',
           position: "absolute",
@@ -39,6 +47,70 @@ export default function Services() {
           />
         ))}
       </Grid>
+      <VStack
+        my="28"
+        w="full"
+        border="1px solid"
+        borderColor="border.default"
+        rounded="xl"
+        p="10"
+      >
+        <Text color="text.primary" fontSize="3xl" fontWeight="bold">
+          Нужна консультация?
+        </Text>
+        <Text color="text.secondary" fontSize="md">
+          Оставьте заявку ниже и мы с вами свяжемся
+        </Text>
+
+        <Fieldset.Root display="flex" alignItems="center">
+          <Fieldset.Content
+            display="flex"
+            flexDirection={{ base: "column", md: "row" }}
+            maxW="xl"
+            w="fit"
+            mt="10"
+          >
+            <Field.Root>
+              <Input
+                name="name"
+                placeholder="ваше имя"
+                _placeholder={{
+                  textAlign: "center",
+                }}
+                rounded="xl"
+                border="1px solid"
+                borderColor="border.default"
+                w="48"
+              />
+            </Field.Root>
+
+            <Field.Root>
+              <Input
+                name="phone"
+                placeholder="номер телефона"
+                rounded="xl"
+                border="1px solid"
+                borderColor="border.default"
+                w="48"
+                _placeholder={{
+                  textAlign: "center",
+                }}
+              />
+            </Field.Root>
+            <Button
+              type="submit"
+              alignSelf="flex-start"
+              rounded="xl"
+              border="1px solid"
+              borderColor="border.default"
+              bgColor="border.accent"
+              w="48"
+            >
+              оставить заявку
+            </Button>
+          </Fieldset.Content>
+        </Fieldset.Root>
+      </VStack>
     </VStack>
   );
 }

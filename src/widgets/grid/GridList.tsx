@@ -48,6 +48,7 @@ export const GridList = ({
               power={card.power}
               category={card.category}
               images={card.images}
+              id={card.id}
               createdAt={card.createdAt}
             />
           );

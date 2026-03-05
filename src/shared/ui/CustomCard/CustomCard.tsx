@@ -3,9 +3,10 @@ import { ReactNode } from "react";
 
 type CardType = {
   children: ReactNode;
+  href: string;
 } & LinkBoxProps;
 
-export const CustomCard = ({ children, ...props }: CardType) => {
+export const CustomCard = ({ children, href, ...props }: CardType) => {
   return (
     <LinkBox
       border="1px solid"
@@ -18,7 +19,7 @@ export const CustomCard = ({ children, ...props }: CardType) => {
       h="full"
       {...props}
     >
-      <LinkOverlay display="flex" flexDirection="column" h="full">
+      <LinkOverlay display="flex" flexDirection="column" h="full" href={href}>
         {children}
       </LinkOverlay>
     </LinkBox>
