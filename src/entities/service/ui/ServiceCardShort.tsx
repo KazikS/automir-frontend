@@ -4,7 +4,7 @@ import { ServiceType } from "../model/type";
 
 export const ServiceCardShort = ({ image, name, description }: ServiceType) => {
   return (
-    <CustomCard p="5" w={{ base: "full", md: undefined }}>
+    <CustomCard p="5" w={{ base: "full", md: undefined }} href="/service">
       <Box
         w="24"
         h="24"
