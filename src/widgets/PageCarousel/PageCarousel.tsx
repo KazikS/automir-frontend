@@ -11,14 +11,8 @@ export const PageCarousel = ({ images }: { images: string[] }) => {
       <Carousel.ItemGroup>
         {images.map((image, index) => (
           <Carousel.Item key={image} index={index} snapAlign="center">
-            <Box>
-              <Image
-                alt=""
-                w="full"
-                h="64"
-                objectFit="cover"
-                src={image}
-              />
+            <Box w="full" aspectRatio={16 / 9} bg="black">
+              <Image src={image} alt="" w="full" h="full" objectFit="contain" />
             </Box>
           </Carousel.Item>
         ))}

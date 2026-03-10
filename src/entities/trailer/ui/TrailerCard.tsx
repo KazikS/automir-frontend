@@ -17,9 +17,10 @@ export const TrailerCard = ({
   createdAt,
   year,
   images,
+  id
 }: TrailerCardType) => {
   return (
-    <CustomCard>
+    <CustomCard href={`/trailers/namely/${id}`}>
       <Badge
         position="absolute"
         w="24"
@@ -38,9 +39,7 @@ export const TrailerCard = ({
         {badge[product_category].label}
       </Badge>
       <Flex borderBottom="1px solid" borderColor="border.default" h="64">
-        <CardCarousel
-          images={images}
-        />
+        <CardCarousel images={images} />
       </Flex>
       <Flex flexDirection="column" p="2.5">
         <Badge
@@ -57,7 +56,9 @@ export const TrailerCard = ({
         >
           {trailer_category}
         </Badge>
-        <Text fontSize="xl">{model}, {year} г.</Text>
+        <Text fontSize="xl">
+          {model}, {year} г.
+        </Text>
         <Text fontSize="sm" color="text.tertiary">
           {capacity} кг · {`${width}x${length}${height ? `x${height}` : ""}`} м
         </Text>

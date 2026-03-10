@@ -10,6 +10,7 @@ export type TrailerCardType = {
   createdAt: string;
   year: number;
   images: string[];
+  id: number;
 };
 
 export type TrailerType = {

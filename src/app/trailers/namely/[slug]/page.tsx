@@ -1,6 +1,16 @@
-import { CAR_DETAIL_MOCK } from "@/entities/car/lib/config";
+import { TRAILER_DETAIL_MOCK } from "@/entities/trailer/lib/config";
 import { PageCarousel } from "@/widgets/PageCarousel";
-import { Box, Button, Field, Fieldset, Flex, Heading, Input, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Field,
+  Fieldset,
+  Flex,
+  Heading,
+  Input,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 
 export default async function Car({
   params,
@@ -9,46 +19,42 @@ export default async function Car({
 }) {
   const { slug } = await params;
   const id = Number(slug);
-  const carInfo = CAR_DETAIL_MOCK.find((car) => car.id === id);
+  const trailerInfo = TRAILER_DETAIL_MOCK.find((trailer) => trailer.id === id);
 
-  if (!carInfo) return null;
+  if (!trailerInfo) return null;
 
   return (
     <Box px="8">
       <Flex gap="10" flexDirection={{ base: "column", md: "row" }}>
         <Flex>
           <Box h="fit-content" display="flex" alignItems="center">
-            <PageCarousel images={carInfo.images} />
+            <PageCarousel images={trailerInfo.images} />
           </Box>
         </Flex>
 
         <Flex flexDirection="column" minW="1/3">
           <Heading textWrap="nowrap">
-            {carInfo.brand} {carInfo.model} {carInfo.year}
+            {trailerInfo.model} {trailerInfo.year}
           </Heading>
           <Text fontSize="2xl" fontWeight="bold" color="text.accent" mb="10">
-            {carInfo.price.toLocaleString("ru-RU")} ₽
+            {trailerInfo.price.toLocaleString("ru-RU")} ₽
           </Text>
 
-          <Text>Поколение: {carInfo.generation}</Text>
-          <Text>Комплектация: {carInfo.equipment}</Text>
-          <Text>Кузов: {carInfo.body}</Text>
-          <Text>Цвет: {carInfo.color}</Text>
-          <Text>Пробег: {carInfo.mileage.toLocaleString("ru-RU")} км</Text>
-
-          <Text>
-            Двигатель: {carInfo.fuelType}, {carInfo.engineVolume}л,
-            {carInfo.power} л.с.
-          </Text>
-          <Text>Коробка: {carInfo.transmission}</Text>
-          <Text>Привод: {carInfo.drive}</Text>
-          <Text>Руль: {carInfo.wheelPosition}</Text>
+          <Text>Категория: {trailerInfo.trailer_category}</Text>
+          <Text>Грузоподъёмность: {trailerInfo.capacity} кг</Text>
+          <Text>Длина: {trailerInfo.length} мм</Text>
+          <Text>Ширина: {trailerInfo.width} мм</Text>
+          {trailerInfo.height && (
+            <Text>Высота борта: {trailerInfo.height} мм</Text>
+          )}
+          <Text>Кол-во осей: {trailerInfo.axes_count}</Text>
+          <Text>Снаряжённая масса: {trailerInfo.mass} кг</Text>
         </Flex>
       </Flex>
       <Text fontSize="2xl" fontWeight="bold" mt="20">
         Описание
       </Text>
-      <Text>{carInfo.description}</Text>
+      <Text>{trailerInfo.description}</Text>
       <VStack
         my="28"
         w="full"

@@ -55,7 +55,7 @@ export const GridList = ({
         }
         return (
           <TrailerCard
-            key={card.images[0]}
+            key={`${card.images[0]}` + `${new Date().getTime()}`}
             product_category={card.product_category}
             trailer_category={card.trailer_category}
             model={card.model}
@@ -67,6 +67,7 @@ export const GridList = ({
             createdAt={card.createdAt}
             year={card.year}
             images={card.images}
+            id={card.id}
           />
         );
       })}
